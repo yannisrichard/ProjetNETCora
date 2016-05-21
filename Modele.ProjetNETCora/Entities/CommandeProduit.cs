@@ -11,17 +11,19 @@ namespace Modele.ProjetNETCora.Entities
 {
     public class CommandeProduit
     {
-       
+        [Key, Column(Order=0)]
+        public int ProduitId { get; set; }
+        public Produit Produit { get; set; }
+
+        [Key, Column(Order = 1)]
+        public int CommandeId { get; set; }
+        public Commande Commande { get; set; }
+
+        [Required]
+        public int Quantite { get; set; }
+
+
 
     }
-
-    public class CommandeProduitFluent : EntityTypeConfiguration<CommandeProduit>
-    {
-        public CommandeProduitFluent()
-        {
-            ToTable("APP_COMMANDEPRODUIT");
-           
-
-        }
-    }
+    
 }

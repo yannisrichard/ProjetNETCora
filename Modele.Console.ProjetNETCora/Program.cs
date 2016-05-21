@@ -23,16 +23,26 @@ namespace Modele.Console.ProjetNETCora
             // test du contexte avec api fluent
             Contexte contexte = new Contexte();
 
+           
+
+            //Test ajout commandeproduit table associative
+            List<CommandeProduit> commandesproduits = new List<CommandeProduit>();
+            commandesproduits.Add(new CommandeProduit { Quantite = 5 });
+            List<Produit> produits = new List<Produit>();
+            produits.Add(new Produit { Code = 1, Libelle = "Produit", Description = null, Actif = false, Stock = 01, Prix = 10.00, CommandesProduits = commandesproduits });
+            contexte.Categories.Add(new Categorie { Libelle = "1ere Commande", Actif = true, Produits = produits });
+
             // ajout d'un nouveau client avec un compte
             List<Commande> commandes = new List<Commande>();
-            commandes.Add(new Commande { DateCommande = DateTime.Now, Observation = "Enchanteur" });
+            commandes.Add(new Commande { DateCommande = DateTime.Now, Observation = "Enchanteur", CommandesProduits = commandesproduits });
             contexte.Clients.Add(new Client { Nom = "Lasticot", Prenom = "Coco", Actif = true, Commandes = commandes });
             contexte.Statuts.Add(new Statut { Libelle = "1ere Commande", Commandes = commandes });
             contexte.SaveChanges();
 
+
             // lecture des clients
             List<Client> mesAutresClients = contexte.Clients.Include(c => c.Commandes).ToList();
-            System.Console.WriteLine("Liste de mes clients : ");
+            System.Console.WriteLine(" Liste de mes clients : ");
             foreach (Client c in mesAutresClients)
             {
                 System.Console.WriteLine("Client n°{0} : {1}", c.Id, c.Nom);
@@ -41,10 +51,18 @@ namespace Modele.Console.ProjetNETCora
                     System.Console.WriteLine("|__ Commande n°{0}, Observation : ", cc.Observation);
                 }
             }
+
+            List<CommandeProduit> mescp = contexte.CommandesProduits.ToList();
+            System.Console.WriteLine(" Liste commandes produits : ");
+            foreach (CommandeProduit cp in mescp)
+            {
+                System.Console.WriteLine("Commande Produit n°{0} : {1} - qte = {2}", cp.CommandeId, cp.ProduitId, cp.Quantite);
+            }
+
             System.Console.WriteLine("...Fin...");
         }
 
-        // permet de tester EF (EntityFramework)
+        // permet de clear bdd
         public static void clearBDD()
         {
             // test du contexte avec api fluent
@@ -78,7 +96,7 @@ namespace Modele.Console.ProjetNETCora
             System.Console.WriteLine("Commandes supprimées");
 
 
-            System.Console.WriteLine("...Fin. suppression...");
+            System.Console.WriteLine("...Fin suppression...");
         }
     }
 }

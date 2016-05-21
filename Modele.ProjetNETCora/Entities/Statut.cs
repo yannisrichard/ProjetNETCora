@@ -22,18 +22,5 @@ namespace Modele.ProjetNETCora.Entities
 
     }
 
-    public class StatutFluent : EntityTypeConfiguration<Statut>
-    {
-        public StatutFluent()
-        {
-            ToTable("APP_STATUT");
-            HasKey(c => c.Id);
 
-            Property(c => c.Id).HasColumnName("STA_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(c => c.Libelle).HasColumnName("STA_LIBELLE").IsRequired().HasMaxLength(50);
-
-            HasMany(c => c.Commandes).WithRequired(cc => cc.Statut).HasForeignKey(cc => cc.StatutId);
-
-        }
-    }
 }

@@ -11,6 +11,7 @@
     <AssemblyName>Modele.ProjetNETCora</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publier\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -67,6 +67,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\CategorieFluent.cs" />
+    <Compile Include="Configurations\ClientFluent.cs" />
+    <Compile Include="Configurations\CommandeFluent.cs" />
+    <Compile Include="Configurations\CommandeProduitFluent.cs" />
+    <Compile Include="Configurations\LogProduitFluent.cs" />
+    <Compile Include="Configurations\ProduitFluent.cs" />
+    <Compile Include="Configurations\StatutFluent.cs" />
     <Compile Include="Contexte.cs" />
     <Compile Include="Entities\Categorie.cs" />
     <Compile Include="Entities\Client.cs" />
@@ -91,7 +98,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configurations\" />
+    <Content Include="ProjetNETCora.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProjetNETCora_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ProjetNETCora.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -112,15 +125,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProjetNETCora.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ProjetNETCora_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ProjetNETCora.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

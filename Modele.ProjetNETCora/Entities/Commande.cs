@@ -27,23 +27,9 @@ namespace Modele.ProjetNETCora.Entities
         public int StatutId { get; set; }
         public Statut Statut { get; set; }
 
+        public ICollection<CommandeProduit> CommandesProduits { get; set; }
+
     }
 
-    public class CommandeFluent : EntityTypeConfiguration<Commande>
-    {
-        public CommandeFluent()
-        {
-            ToTable("APP_COMMANDE");
-            HasKey(c => c.Id);
 
-            Property(c => c.Id).HasColumnName("CMD_ID").IsRequired().HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(c => c.DateCommande).HasColumnName("CMD_DATECOMMANDE").IsRequired();
-            Property(c => c.Observation).HasColumnName("CMD_OBSERVATION").IsRequired().HasMaxLength(50);
-
-            HasRequired(cc => cc.Client).WithMany(c => c.Commandes).HasForeignKey(c => c.ClientId);
-            HasRequired(cc => cc.Statut).WithMany(c => c.Commandes).HasForeignKey(c => c.StatutId);
-
-
-        }
-    }
 }
