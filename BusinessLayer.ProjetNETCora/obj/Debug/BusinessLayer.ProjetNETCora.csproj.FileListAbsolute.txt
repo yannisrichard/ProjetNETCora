@@ -1,0 +1,14 @@
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\ProjetNETCora.mdf
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\ProjetNETCora_log.ldf
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\BusinessLayer.ProjetNETCora.dll.config
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\BusinessLayer.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\BusinessLayer.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\EntityFramework.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\EntityFramework.xml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.xml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\obj\Debug\BusinessLayer.ProjetNETCora.csprojResolveAssemblyReference.cache
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\obj\Debug\BusinessLayer.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\BusinessLayer.ProjetNETCora\obj\Debug\BusinessLayer.ProjetNETCora.pdb

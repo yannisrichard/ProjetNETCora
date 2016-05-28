@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Modele.ProjetNETCora;
 using Modele.ProjetNETCora.Entities;
+using BusinessLayer.ProjetNETCora;
 
 namespace Modele.Console.ProjetNETCora
 {
@@ -13,9 +14,25 @@ namespace Modele.Console.ProjetNETCora
     {
         public static void Main(string[] args)
         {
-            TestEntityFramework();
+            //TestEntityFramework();
+            TestBusinessLayer();
             //clearBDD();
         }
+
+        // permet de tester la BusinessLayer
+        public static void TestBusinessLayer()
+        {
+            Manager bm = Manager.Instance;
+            List<Categorie> categories = bm.GetAllCategorie();
+            System.Console.WriteLine("---- LISTE DES CATEGORIES -----");
+            foreach (Categorie c in categories)
+            {
+                System.Console.WriteLine("Catégorie ID {0} : {1}", c.Id, c.Libelle);
+            }
+            System.Console.WriteLine("...Fin...");
+
+        }
+
 
         // permet de tester EF (EntityFramework)
         public static void TestEntityFramework()

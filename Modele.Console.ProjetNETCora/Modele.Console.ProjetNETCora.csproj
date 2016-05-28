@@ -54,6 +54,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer.ProjetNETCora\BusinessLayer.ProjetNETCora.csproj">
+      <Project>{aa76860b-f34a-46d3-9cd4-81e590a4d26e}</Project>
+      <Name>BusinessLayer.ProjetNETCora</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modele.ProjetNETCora\Modele.ProjetNETCora.csproj">
       <Project>{365c06c8-4e6f-459b-a30a-b46cbe3a9f87}</Project>
       <Name>Modele.ProjetNETCora</Name>

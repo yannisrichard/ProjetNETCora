@@ -15,9 +15,9 @@ namespace Modele.ProjetNETCora
         public Contexte() : base("name=ProjetNETCoraConnexionString") 
         {
             //Drop puis create
-            Database.SetInitializer<Contexte>(new DropCreateDatabaseAlways<Contexte>());
+            //Database.SetInitializer<Contexte>(new DropCreateDatabaseAlways<Contexte>());
             //Pas de drop
-            //Database.SetInitializer<Contexte>(null);
+            Database.SetInitializer<Contexte>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
