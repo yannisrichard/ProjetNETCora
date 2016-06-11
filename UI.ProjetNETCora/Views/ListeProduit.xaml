@@ -36,6 +36,6 @@
             </DataGrid.Columns>
         </DataGrid>-->
         
-        <!--<my:DetailProduit DataContext="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged}"></my:DetailProduit>-->
+        <my:DetailProduit Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" DataContext="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged}"></my:DetailProduit>
     </Grid>
 </UserControl>

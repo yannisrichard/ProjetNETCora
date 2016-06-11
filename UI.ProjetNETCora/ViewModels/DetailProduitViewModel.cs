@@ -1,4 +1,5 @@
-﻿using Modele.ProjetNETCora.Entities;
+﻿using BusinessLayer.ProjetNETCora;
+using Modele.ProjetNETCora.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace UI.ProjetNETCora.ViewModels
         private int _categorieID;
 
         private RelayCommand _addOperation;
+        private RelayCommand _modifierStock;
 
         #endregion
 
@@ -142,6 +144,31 @@ namespace UI.ProjetNETCora.ViewModels
             Views.Operation operationWindow = new Views.Operation();
             operationWindow.DataContext = this;
             operationWindow.ShowDialog();
+        }
+
+        /// <summary>
+        /// Commande pour ouvrir la fenêtre pour ajouter une opération
+        /// </summary>
+        public ICommand ModifierStock
+        {
+            get
+            {
+                if (_modifierStock == null)
+                    _modifierStock = new RelayCommand(() => this.ModifierStockOperation());
+                return _modifierStock;
+            }
+        }
+
+        /// <summary>
+        /// Modifier stock operation
+        /// </summary>
+        private void ModifierStockOperation()
+        {
+            //A Terminer Sotckoperation
+            Produit p = new Produit();
+            p.Code = Code;
+            p.Libelle = Libelle;
+            Manager.Instance.ModifierProduit(p);
         }
 
         #endregion

@@ -10,25 +10,44 @@
             <RowDefinition Height="35"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="35"></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        
-        <Label Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" HorizontalAlignment="Stretch" Background="AliceBlue" FontWeight="Bold">FICHE PRODUIT</Label>
 
-        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Vertical">
-            <Label>Code du produit</Label>
-            <TextBox Text="{Binding Code}"></TextBox>
-            <Label>Libelle du produit</Label>
-            <TextBox Text="{Binding Libelle}"></TextBox>
-        </StackPanel>
+        <Label Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" HorizontalAlignment="Stretch" Background="AliceBlue" FontWeight="Bold">DETAILS DU PRODUIT</Label>
 
-        <Label Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="AliceBlue" FontWeight="Bold">REMISE EN STOCK</Label>
-        <Button Grid.Column="3" Margin="5" Grid.Row="2" FontSize="12px" Command="{Binding AddOperation}">+</Button>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap">
+                <Run>Libelle : </Run> 
+                <Run Text="{Binding Libelle}" />
+            </TextBlock>
+            <TextBlock Grid.Column="0" Grid.RowSpan="2" Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap">
+                <Run>Description : </Run> 
+                <Run Text="{Binding Description}" />
+            </TextBlock>
+        </Grid>
+
+
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="AliceBlue" FontWeight="Bold">REMISE EN STOCK</Label>
+            <Button Grid.Column="3" Margin="5"  FontSize="12px" Command="{Binding AddOperation}" Background="DarkCyan" >Valeur du stock</Button>
+        </Grid>
     </Grid>
 </UserControl>
