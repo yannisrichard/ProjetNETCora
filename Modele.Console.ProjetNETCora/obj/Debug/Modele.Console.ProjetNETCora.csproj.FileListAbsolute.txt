@@ -1,18 +1,5 @@
 U:\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.exe.config
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.exe.config
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\ProjetNETCora.mdf
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\ProjetNETCora_log.ldf
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.exe
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.pdb
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.dll
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.dll
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.dll
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.pdb
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.xml
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.xml
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.csprojResolveAssemblyReference.cache
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.exe
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.pdb
 C:\travail\ProjetNETCora-master\ProjetNETCora-master\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.exe.config
 C:\travail\ProjetNETCora-master\ProjetNETCora-master\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.exe
 C:\travail\ProjetNETCora-master\ProjetNETCora-master\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.pdb
@@ -27,5 +14,18 @@ C:\travail\ProjetNETCora-master\ProjetNETCora-master\Modele.Console.ProjetNETCor
 C:\travail\ProjetNETCora-master\ProjetNETCora-master\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.xml
 C:\travail\ProjetNETCora-master\ProjetNETCora-master\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.xml
 C:\travail\ProjetNETCora-master\ProjetNETCora-master\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.csprojResolveAssemblyReference.cache
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\ProjetNETCora.mdf
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\ProjetNETCora_log.ldf
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.exe.config
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.exe
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.Console.ProjetNETCora.pdb
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\BusinessLayer.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.dll
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\BusinessLayer.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.xml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.csprojResolveAssemblyReference.cache
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.exe
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Console.ProjetNETCora\obj\Debug\Modele.Console.ProjetNETCora.pdb
