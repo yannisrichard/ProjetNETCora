@@ -22,6 +22,13 @@ namespace UI.ProjetNETCora.ViewModels
         private ObservableCollection<DetailProduitViewModel> _produits = null;
         private DetailProduitViewModel _selectedProduit;
         private RelayCommand _updateProduits;
+        private RelayCommand _openWindowAddProduit;
+        private RelayCommand _btnAddProduit;
+
+        
+        private Views.AjouterProduit addProduitWindow;
+
+
         #endregion
 
         #region Constructeurs
@@ -79,6 +86,57 @@ namespace UI.ProjetNETCora.ViewModels
         /// <summary>
         /// Commande pour ouvrir la fenêtre pour ajouter une opération
         /// </summary>
+        public ICommand OpenWindowAddProduit
+        {
+            get
+            {
+                if (_openWindowAddProduit == null)
+                    _openWindowAddProduit = new RelayCommand(() => this.ShowAddProduits());
+                return _openWindowAddProduit;
+            }
+        }
+
+        /// <summary>
+        /// Permet l'ouverture de la fenêtre
+        /// </summary>
+        private void ShowAddProduits()
+        {
+            addProduitWindow = new Views.AjouterProduit();
+            addProduitWindow.DataContext = this;
+            addProduitWindow.ShowDialog();
+        }
+
+        /// <summary>
+        /// Commande pour ouvrir la fenêtre pour ajouter une opération
+        /// </summary>
+        public ICommand BtnAddProduit
+        {
+            get
+            {
+                if (_btnAddProduit == null)
+                    _btnAddProduit = new RelayCommand(() => this.AddProduit());
+                return _btnAddProduit;
+            }
+        }
+
+        /// <summary>
+        /// Modifier stock operation
+        /// </summary>
+        private void AddProduit()
+        {
+            //A Terminer Sotckoperation manque binding textbox modal
+            Produit p = new Produit();
+            //p.Code = Code;
+            //p.Stock = Stock;
+            Manager.Instance.AjouterProduit(p);
+            addProduitWindow.Close();
+
+        }
+
+
+        /// <summary>
+        /// Commande pour ouvrir la fenêtre pour ajouter une opération
+        /// </summary>
         public ICommand UpdateProduits
         {
             get
@@ -92,7 +150,7 @@ namespace UI.ProjetNETCora.ViewModels
         /// <summary>
         /// Modifier stock operation
         /// </summary>
-        private void MettreAJourLaListeDeProduits()
+        public void MettreAJourLaListeDeProduits()
         {
             Produits.Clear();
             foreach (Produit p in Manager.Instance.GetAllProduit())

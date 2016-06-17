@@ -2,4 +2,3 @@ D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Test.ProjetNETCora\bin
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Test.ProjetNETCora\bin\Debug\Modele.Test.ProjetNETCora.pdb
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Test.ProjetNETCora\obj\Debug\Modele.Test.ProjetNETCora.dll
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Test.ProjetNETCora\obj\Debug\Modele.Test.ProjetNETCora.pdb
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.Test.ProjetNETCora\obj\Debug\Modele.Test.ProjetNETCora.csprojResolveAssemblyReference.cache

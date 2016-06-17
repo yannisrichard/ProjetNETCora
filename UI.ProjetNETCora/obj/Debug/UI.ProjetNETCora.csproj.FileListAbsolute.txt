@@ -36,4 +36,5 @@ D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Th
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\ShinyBlue.baml
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\ShinyRed.baml
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\WhistlerBlue.baml
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\App.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Views\AjouterProduit.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Views\AjouterProduit.g.cs

@@ -27,6 +27,7 @@ namespace UI.ProjetNETCora.ViewModels
         private int _stock;
         private double _prix;
         private int _categorieID;
+        private string _stockBackground;
 
         private RelayCommand _addOperation;
         private RelayCommand _modifierStock;
@@ -51,6 +52,13 @@ namespace UI.ProjetNETCora.ViewModels
             _stock = p.Stock;
             _prix = p.Prix;
             _categorieID = p.CategorieId;
+            if (_stock < 10)
+            {
+                _stockBackground = "Red";
+            }
+            else{
+                _stockBackground = "Green";
+            }
         }
 
         #endregion
@@ -129,6 +137,14 @@ namespace UI.ProjetNETCora.ViewModels
             set { _categorieID = value; }
         }
 
+        /// <summary>
+        /// StockBackground du produit
+        /// </summary>
+        public string StockBackground
+        {
+            get { return _stockBackground; }
+            set { _stockBackground = value; }
+        }
 
         #endregion
 
@@ -181,6 +197,7 @@ namespace UI.ProjetNETCora.ViewModels
             p.Stock = Stock;
             Manager.Instance.ModifierProduit(p);
             operationWindow.Close();
+            
         }
 
         #endregion

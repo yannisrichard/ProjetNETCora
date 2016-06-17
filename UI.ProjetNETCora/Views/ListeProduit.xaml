@@ -5,20 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:my="clr-namespace:UI.ProjetNETCora.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="525">
+             d:DesignHeight="400" d:DesignWidth="525">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" >Filtre sur le nom :</Label>
+        <TextBox Grid.Column="0" Grid.Row="0" Margin="0, 20, 20, 20" TextWrapping="Wrap" Text="{Binding FiltreProduits}" ></TextBox>
+        <Button Grid.Column="2" Grid.Row="0" Margin="15" FontSize="12px" Command="{Binding OpenWindowAddProduit}" Background="DarkCyan" >Ajouter un produit</Button>
 
-        <ListView Grid.Column="0"  Grid.Row="0" Grid.RowSpan="3" Margin="5px" ItemsSource="{Binding Produits, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+        <ListView Grid.Column="0"  Grid.Row="1" Grid.RowSpan="4" Margin="5px" ItemsSource="{Binding Produits, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="80px" Header="Code" DisplayMemberBinding="{Binding Code}" />
@@ -27,8 +34,8 @@
                 </GridView>
             </ListView.View>
         </ListView>      
-        <Button Grid.Column="1" Grid.Row="2" Margin="30" FontSize="12px" Command="{Binding UpdateProduits}" Background="DarkCyan" >MàJ liste des produits</Button>
+        <Button Grid.Column="0" Grid.Row="6" Margin="15" FontSize="12px" Command="{Binding UpdateProduits}" Background="DarkCyan" >MàJ liste des produits</Button>
 
-        <my:DetailProduit Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" DataContext="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged}"></my:DetailProduit>
+        <my:DetailProduit Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="5" DataContext="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged}"></my:DetailProduit>
     </Grid>
 </UserControl>

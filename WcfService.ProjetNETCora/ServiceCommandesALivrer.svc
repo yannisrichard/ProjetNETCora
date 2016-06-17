@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfService.ProjetNETCora.ServiceCommandesALivrer" CodeBehind="ServiceCommandesALivrer.svc.cs" %>

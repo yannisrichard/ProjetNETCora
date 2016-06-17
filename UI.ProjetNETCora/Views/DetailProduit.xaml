@@ -9,7 +9,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="35"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="35"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Label Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" HorizontalAlignment="Stretch" Background="AliceBlue" FontWeight="Bold">DETAILS DU PRODUIT</Label>
@@ -35,19 +34,14 @@
                 <Run>Description : </Run> 
                 <Run Text="{Binding Description}" />
             </TextBlock>
+
+            <Button Grid.Row="2" Grid.Column="0" Margin="0, 20, 40, 20" FontSize="12px" Command="{Binding AddOperation}" Background="{Binding StockBackground}" >
+                <Run Text="{Binding Stock}" />
+            </Button>
+
         </Grid>
-
-
-
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="AliceBlue" FontWeight="Bold">REMISE EN STOCK</Label>
-            <Button Grid.Column="3" Margin="5"  FontSize="12px" Command="{Binding AddOperation}" Background="DarkCyan" >Valeur du stock</Button>
-        </Grid>
+  
+        
     </Grid>
+        
 </UserControl>

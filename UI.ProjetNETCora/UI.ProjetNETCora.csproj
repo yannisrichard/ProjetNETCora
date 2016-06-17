@@ -67,6 +67,9 @@
     <Compile Include="ViewModels\Common\RelayCommand.cs" />
     <Compile Include="ViewModels\DetailProduitViewModel.cs" />
     <Compile Include="ViewModels\ListeProduitViewModel.cs" />
+    <Compile Include="Views\AjouterProduit.xaml.cs">
+      <DependentUpon>AjouterProduit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DetailProduit.xaml.cs">
       <DependentUpon>DetailProduit.xaml</DependentUpon>
     </Compile>
@@ -115,6 +118,10 @@
     <Page Include="Themes\WhistlerBlue.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AjouterProduit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DetailProduit.xaml">
       <Generator>MSBuild:Compile</Generator>

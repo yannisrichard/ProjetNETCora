@@ -1,0 +1,16 @@
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\ProjetNETCora.mdf
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\ProjetNETCora_log.ldf
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\WcfService.ProjetNETCora.dll.config
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\WcfService.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\WcfService.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\Modele.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\EntityFramework.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\Modele.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\EntityFramework.xml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\obj\Debug\WcfService.ProjetNETCora.csprojResolveAssemblyReference.cache
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\obj\Debug\WcfService.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\obj\Debug\WcfService.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\BusinessLayer.ProjetNETCora.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\BusinessLayer.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\EntityFramework.SqlServer.dll
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\WcfService.ProjetNETCora\bin\EntityFramework.SqlServer.xml
