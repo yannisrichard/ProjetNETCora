@@ -19,6 +19,7 @@ namespace UI.ProjetNETCora.ViewModels
     {
         #region Variables
 
+        private int _id;
         private int _code;
         private string _libelle;
         private string _description;
@@ -30,6 +31,8 @@ namespace UI.ProjetNETCora.ViewModels
         private RelayCommand _addOperation;
         private RelayCommand _modifierStock;
 
+        private Views.Operation operationWindow;
+
         #endregion
 
         #region Constructeurs
@@ -40,6 +43,7 @@ namespace UI.ProjetNETCora.ViewModels
         /// </summary>
         public DetailProduitViewModel(Produit p)
         {
+            _id = p.Id;
             _code = p.Code;
             _libelle = p.Libelle;
             _description = p.Description;
@@ -47,12 +51,19 @@ namespace UI.ProjetNETCora.ViewModels
             _stock = p.Stock;
             _prix = p.Prix;
             _categorieID = p.CategorieId;
-
         }
 
         #endregion
 
         #region Data Bindings
+
+        /// <summary>
+        /// Code du produit
+        /// </summary>
+        public int Id
+        {
+            get { return _id; }
+        }
 
         /// <summary>
         /// Code du produit
@@ -141,7 +152,7 @@ namespace UI.ProjetNETCora.ViewModels
         /// </summary>
         private void ShowWindowOperation()
         {
-            Views.Operation operationWindow = new Views.Operation();
+            operationWindow = new Views.Operation();
             operationWindow.DataContext = this;
             operationWindow.ShowDialog();
         }
@@ -165,10 +176,11 @@ namespace UI.ProjetNETCora.ViewModels
         private void ModifierStockOperation()
         {
             //A Terminer Sotckoperation
-            Produit p = new Produit();
+            Produit p = Manager.Instance.GetByIdProduit(Id);
             p.Code = Code;
-            p.Libelle = Libelle;
+            p.Stock = Stock;
             Manager.Instance.ModifierProduit(p);
+            operationWindow.Close();
         }
 
         #endregion

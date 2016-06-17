@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using UI.ProjetNETCora.ViewModels.Common;
 
 namespace UI.ProjetNETCora.ViewModels
@@ -20,7 +21,7 @@ namespace UI.ProjetNETCora.ViewModels
 
         private ObservableCollection<DetailProduitViewModel> _produits = null;
         private DetailProduitViewModel _selectedProduit;
-
+        private RelayCommand _updateProduits;
         #endregion
 
         #region Constructeurs
@@ -70,6 +71,38 @@ namespace UI.ProjetNETCora.ViewModels
             }
         }
 
+
+        #endregion
+
+        #region Commandes
+
+        /// <summary>
+        /// Commande pour ouvrir la fenêtre pour ajouter une opération
+        /// </summary>
+        public ICommand UpdateProduits
+        {
+            get
+            {
+                if (_updateProduits == null)
+                    _updateProduits = new RelayCommand(() => this.MettreAJourLaListeDeProduits());
+                return _updateProduits;
+            }
+        }
+
+        /// <summary>
+        /// Modifier stock operation
+        /// </summary>
+        private void MettreAJourLaListeDeProduits()
+        {
+            Produits.Clear();
+            foreach (Produit p in Manager.Instance.GetAllProduit())
+            {
+                Produits.Add(new DetailProduitViewModel(p));
+            }
+
+            if (Produits != null && Produits.Count > 0)
+                SelectedProduit = Produits.ElementAt(0);
+        }
 
         #endregion
     }

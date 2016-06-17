@@ -29,3 +29,11 @@ D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\UI
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\UI.ProjetNETCora.csproj.GenerateResource.Cache
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\UI.ProjetNETCora.exe
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\UI.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\BureauBlack.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\BureauBlue.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\ExpressionDark.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\ExpressionLight.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\ShinyBlue.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\ShinyRed.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\Themes\WhistlerBlue.baml
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\UI.ProjetNETCora\obj\Debug\App.baml

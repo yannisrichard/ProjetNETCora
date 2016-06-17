@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{8A0C92A3-0A09-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.ProjetNETCora", "UI.ProjetNETCora\UI.ProjetNETCora.csproj", "{7CFBFD72-3CDE-46D5-91EB-1B1FA7C8A38D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EEE4D7F6-92EC-4F8C-8F60-82CFFE9EE87A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

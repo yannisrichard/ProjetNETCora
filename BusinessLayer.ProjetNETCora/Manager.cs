@@ -289,6 +289,17 @@ namespace BusinessLayer.ProjetNETCora
         }
 
         /// <summary>
+        /// Récupérer un produit par son ID
+        /// </summary>
+        /// <param name="id">Identifiant du produit à récupérer</param>
+        /// <returns>IQueryable de Produit</returns>
+        public Produit GetByIdProduit(int id)
+        {
+            ProduitQuery pq = new ProduitQuery(contexte);
+            return pq.GetByID(id).FirstOrDefault();
+        }
+
+        /// <summary>
         /// Ajouter un produit en base
         /// </summary>
         /// <param name="p">Produit à ajouter</param>

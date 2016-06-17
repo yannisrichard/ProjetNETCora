@@ -26,16 +26,9 @@
                     <GridViewColumn Width="100px" Header="Stock" DisplayMemberBinding="{Binding Stock}" />
                 </GridView>
             </ListView.View>
-        </ListView>
-        
-        <!--<DataGrid Grid.Column="0"  Grid.Row="0" Grid.RowSpan="3" AutoGenerateColumns="False" ItemsSource="{Binding Produits, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" SelectionMode="Extended" Background="AliceBlue" >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Code" IsReadOnly="True" Binding="{Binding Code}" Width="*"  />
-                <DataGridTextColumn Header="Libelle" IsReadOnly="True" Binding="{Binding Libelle}" Width="*" />
-                <DataGridTextColumn Header="Stock" IsReadOnly="True" Binding="{Binding Stock}" Width="*" />
-            </DataGrid.Columns>
-        </DataGrid>-->
-        
+        </ListView>      
+        <Button Grid.Column="1" Grid.Row="2" Margin="30" FontSize="12px" Command="{Binding UpdateProduits}" Background="DarkCyan" >MàJ liste des produits</Button>
+
         <my:DetailProduit Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" DataContext="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged}"></my:DetailProduit>
     </Grid>
 </UserControl>

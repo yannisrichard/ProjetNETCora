@@ -27,9 +27,9 @@ D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\bin\Debu
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.dll
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\bin\Debug\EntityFramework.xml
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\bin\Debug\EntityFramework.SqlServer.xml
-D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\obj\Debug\Modele.ProjetNETCora.csprojResolveAssemblyReference.cache
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\obj\Debug\Modele.ProjetNETCora.dll
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\obj\Debug\Modele.ProjetNETCora.pdb
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.dll.config
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.dll
 D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\bin\Debug\Modele.ProjetNETCora.pdb
+D:\Yannis\Documents\Licence Pro 2\C#\ProjetNETCora\Modele.ProjetNETCora\obj\Debug\Modele.ProjetNETCora.csprojResolveAssemblyReference.cache
