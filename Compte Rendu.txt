@@ -1,0 +1,12 @@
+Travail effectué :
+
+- Modele -> Terminé selon les consignes
+- BusinessLayer -> Terminé selon les consignes, plus command/queries pour toutes les tables.
+- Console -> Une méthode pour tester EntityFramework et une seconde pour tester la BusinessLayer.
+- WPF -> Terminé selon les consignes. 
+		 Fonctionalités supplémentaires : Ajouter un produit - Supprimer un produit - Log des produits selon l'ajout d'un produit ou de la mise à jour de son stock. Pas de log lors de la suppression car la suppression du produit supprime également le log que je viens d'ajouter car il prend le produitId dans ses champs.
+- WCF -> Terminé mais le retour n'a pas été peaufiné, retourne directement la commande.
+- WebApplication MVC -> Selon les consignes, la recherche n'a pas été complétement implémentés.
+						Fonctionalités supplémentaires : Ajout d'un produit.
+														 Page A Propos de et Contact.
+														 Inscription-Connection utilisateur avec une seconde BDD.

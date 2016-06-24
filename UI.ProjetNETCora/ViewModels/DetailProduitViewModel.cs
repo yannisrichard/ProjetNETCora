@@ -196,8 +196,14 @@ namespace UI.ProjetNETCora.ViewModels
             p.Code = Code;
             p.Stock = Stock;
             Manager.Instance.ModifierProduit(p);
-            operationWindow.Close();
-            
+
+            LogProduit lp = new LogProduit();
+            lp.Message = "Modification stock";
+            lp.Date = DateTime.Now;
+            lp.ProduitId = p.Id;
+            Manager.Instance.AjouterLogProduit(lp);
+
+            operationWindow.Close();     
         }
 
         #endregion

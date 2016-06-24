@@ -238,8 +238,14 @@ namespace UI.ProjetNETCora.ViewModels
             p.Stock = Stock;
             p.Prix = Prix;
             p.CategorieId = Categorie;
-
             Manager.Instance.AjouterProduit(p);
+
+            LogProduit lp = new LogProduit();
+            lp.Message = "Ajouter";
+            lp.Date = DateTime.Now;
+            lp.ProduitId = p.Id;
+            Manager.Instance.AjouterLogProduit(lp);
+
             MettreAJourLaListeDeProduits();
             addProduitWindow.Close();
         }
@@ -292,6 +298,7 @@ namespace UI.ProjetNETCora.ViewModels
         public void DeleteSelectedProduit()
         {
             Manager.Instance.SupprimerProduit(SelectedProduit.Id);
+
             MettreAJourLaListeDeProduits();
         }
 
