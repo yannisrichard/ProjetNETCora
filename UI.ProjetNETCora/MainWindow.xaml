@@ -13,7 +13,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <DockPanel Background="CadetBlue">
-            <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="26" Foreground="White">Mon Application</Label>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="26" Foreground="White">Cora Application</Label>
         </DockPanel>
         <my:ListeProduit Grid.Row="1" DataContext="{Binding ListeProduitViewModel}"></my:ListeProduit>
     </Grid>

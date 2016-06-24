@@ -1,7 +1,8 @@
 ﻿<Window x:Class="UI.ProjetNETCora.Views.AjouterProduit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Ajouter Produit" Height="400" Width="300">
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Ajouter Produit" Height="500" Width="350">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"></RowDefinition>
@@ -13,19 +14,18 @@
 
         <StackPanel Grid.Row="1" Orientation="Vertical">
             <Label>Code </Label>
-            <TextBox Text="{Binding Code}"></TextBox>
+            <xctk:IntegerUpDown Value="{Binding Code}" />
             <Label>Libelle </Label>
             <TextBox Text="{Binding Libelle}"></TextBox>
             <Label>Description</Label>
             <TextBox Text="{Binding Description}"></TextBox>
-            <Label>Actif</Label>
-            <TextBox Text="{Binding Actif}"></TextBox>
+            <RadioButton Content="Actif" IsChecked="{Binding Actif}"/>
             <Label>Stock</Label>
-            <TextBox Text="{Binding Stock}"></TextBox>
+            <xctk:IntegerUpDown Value="{Binding Stock}" />
             <Label>Prix</Label>
-            <TextBox Text="{Binding Prix}"></TextBox>
+            <xctk:DoubleUpDown Value="{Binding Prix}" />
             <Label>Categorie</Label>
-            <TextBox Text="{Binding Categorie}"></TextBox>
+            <xctk:IntegerUpDown Value="{Binding Categorie}" />
         </StackPanel>
 
         <Button Margin="5" Grid.Row="2" FontSize="12px" Background="DarkCyan" Command="{Binding BtnAddProduit}">Ajouter Produit</Button>

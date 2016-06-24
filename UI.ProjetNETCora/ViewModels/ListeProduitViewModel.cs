@@ -21,13 +21,22 @@ namespace UI.ProjetNETCora.ViewModels
 
         private ObservableCollection<DetailProduitViewModel> _produits = null;
         private DetailProduitViewModel _selectedProduit;
+        private String _filtreProduits;
+        private int _code;
+        private String _libelle;
+        private String _description;
+        private bool _actif;
+        private int _stock;
+        private Double _prix;
+        private int _categorie;
+
         private RelayCommand _updateProduits;
+        private RelayCommand _deleteProduits;
         private RelayCommand _openWindowAddProduit;
         private RelayCommand _btnAddProduit;
-
+        private RelayCommand _btnRechercheProduit;
         
         private Views.AjouterProduit addProduitWindow;
-
 
         #endregion
 
@@ -38,6 +47,7 @@ namespace UI.ProjetNETCora.ViewModels
         /// </summary>
         public ListeProduitViewModel()
         {
+            Actif = true;
             _produits = new ObservableCollection<DetailProduitViewModel>();
             foreach (Produit p in Manager.Instance.GetAllProduit())
             {
@@ -77,8 +87,103 @@ namespace UI.ProjetNETCora.ViewModels
                 OnPropertyChanged("SelectedProduit");
             }
         }
+        /// <summary>
+        /// Databinding FiltreProduits
+        /// </summary>
+        public String FiltreProduits
+        {
+            get { return _filtreProduits; }
+            set
+            {
+                _filtreProduits = value;
+                OnPropertyChanged("FiltreProduits");
+            }
+        }
 
-
+        /// <summary>
+        /// Databinding Code
+        /// </summary>
+        public int Code
+        {
+            get { return _code; }
+            set
+            {
+                _code = value;
+                OnPropertyChanged("Code");
+            }
+        }
+        /// <summary>
+        /// Databinding Libelle
+        /// </summary>
+        public String Libelle
+        {
+            get { return _libelle; }
+            set
+            {
+                _libelle = value;
+                OnPropertyChanged("Libelle");
+            }
+        }
+        /// <summary>
+        /// Databinding Description
+        /// </summary>
+        public String Description
+        {
+            get { return _description; }
+            set
+            {
+                _description = value;
+                OnPropertyChanged("Description");
+            }
+        }
+        /// <summary>
+        /// Databinding Actif
+        /// </summary>
+        public bool Actif
+        {
+            get { return _actif; }
+            set
+            {
+                _actif = value;
+                OnPropertyChanged("Actif");
+            }
+        }
+        /// <summary>
+        /// Databinding Stock
+        /// </summary>
+        public int Stock
+        {
+            get { return _stock; }
+            set
+            {
+                _stock = value;
+                OnPropertyChanged("Stock");
+            }
+        }
+        /// <summary>
+        /// Databinding Prix
+        /// </summary>
+        public Double Prix
+        {
+            get { return _prix; }
+            set
+            {
+                _prix = value;
+                OnPropertyChanged("Prix");
+            }
+        }
+        /// <summary>
+        /// Databinding Categorie
+        /// </summary>
+        public int Categorie
+        {
+            get { return _categorie; }
+            set
+            {
+                _categorie = value;
+                OnPropertyChanged("Categorie");
+            }
+        }
         #endregion
 
         #region Commandes
@@ -126,11 +231,17 @@ namespace UI.ProjetNETCora.ViewModels
         {
             //A Terminer Sotckoperation manque binding textbox modal
             Produit p = new Produit();
-            //p.Code = Code;
-            //p.Stock = Stock;
-            Manager.Instance.AjouterProduit(p);
-            addProduitWindow.Close();
+            p.Code = Code;
+            p.Libelle = Libelle;
+            p.Description = Description ;
+            p.Actif = Actif;
+            p.Stock = Stock;
+            p.Prix = Prix;
+            p.CategorieId = Categorie;
 
+            Manager.Instance.AjouterProduit(p);
+            MettreAJourLaListeDeProduits();
+            addProduitWindow.Close();
         }
 
 
@@ -161,6 +272,58 @@ namespace UI.ProjetNETCora.ViewModels
             if (Produits != null && Produits.Count > 0)
                 SelectedProduit = Produits.ElementAt(0);
         }
+
+        /// <summary>
+        /// Commande pour supprimer des produits
+        /// </summary>
+        public ICommand DeleteProduits
+        {
+            get
+            {
+                if (_deleteProduits == null)
+                    _deleteProduits = new RelayCommand(() => this.DeleteSelectedProduit());
+                return _deleteProduits;
+            }
+        }
+
+        /// <summary>
+        /// Supprime selectedProduit
+        /// </summary>
+        public void DeleteSelectedProduit()
+        {
+            Manager.Instance.SupprimerProduit(SelectedProduit.Id);
+            MettreAJourLaListeDeProduits();
+        }
+
+        /// <summary>
+        /// Commande pour filtrer la liste des produits
+        /// </summary>
+        public ICommand BtnRechercheProduit
+        {
+            get
+            {
+                if (_btnRechercheProduit == null)
+                    _btnRechercheProduit = new RelayCommand(() => this.RechercheProduits());
+                return _btnRechercheProduit;
+            }
+        }
+
+        /// <summary>
+        /// Filtre la liste de produit
+        /// </summary>
+        public void RechercheProduits()
+        {
+            Produits.Clear();
+            List<Produit> produitsFiltre = Manager.Instance.GetAllProduit().Where(x => x.Libelle.Contains(FiltreProduits)).ToList();
+            foreach (Produit p in produitsFiltre)
+            {
+                Produits.Add(new DetailProduitViewModel(p));
+            }
+
+            if (Produits != null && Produits.Count > 0)
+                SelectedProduit = Produits.ElementAt(0);
+        }
+        
 
         #endregion
     }

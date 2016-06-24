@@ -21,20 +21,28 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" >Filtre sur le nom :</Label>
+        <Label Grid.Column="0" Grid.Row="0" >Filtre sur le Libelle :</Label>
         <TextBox Grid.Column="0" Grid.Row="0" Margin="0, 20, 20, 20" TextWrapping="Wrap" Text="{Binding FiltreProduits}" ></TextBox>
-        <Button Grid.Column="2" Grid.Row="0" Margin="15" FontSize="12px" Command="{Binding OpenWindowAddProduit}" Background="DarkCyan" >Ajouter un produit</Button>
+        <Button Grid.Column="1" Grid.Row="0" Margin="0, 20, 125, 20" FontSize="10px" Command="{Binding BtnRechercheProduit}" Background="DarkCyan" >Rechercher</Button>
+        <Button Grid.Column="2" Grid.Row="0" Margin="80, 20, 0, 20" FontSize="12px" Command="{Binding OpenWindowAddProduit}" Background="DarkCyan" >Ajouter un produit</Button>
 
         <ListView Grid.Column="0"  Grid.Row="1" Grid.RowSpan="4" Margin="5px" ItemsSource="{Binding Produits, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="80px" Header="Code" DisplayMemberBinding="{Binding Code}" />
-                    <GridViewColumn Width="80px" Header="Libelle" DisplayMemberBinding="{Binding Libelle}" />
-                    <GridViewColumn Width="100px" Header="Stock" DisplayMemberBinding="{Binding Stock}" />
+                    <GridViewColumn Width="50px" Header="Code" DisplayMemberBinding="{Binding Code}" />
+                    <GridViewColumn Width="160px" Header="Libelle" DisplayMemberBinding="{Binding Libelle}" />
+                    <GridViewColumn Width="50px" Header="Stock" DisplayMemberBinding="{Binding Stock}" />
                 </GridView>
             </ListView.View>
-        </ListView>      
-        <Button Grid.Column="0" Grid.Row="6" Margin="15" FontSize="12px" Command="{Binding UpdateProduits}" Background="DarkCyan" >MàJ liste des produits</Button>
+        </ListView>
+        <Grid Grid.Column="0" Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="0, 15, 10, 15" FontSize="10px" Command="{Binding UpdateProduits}" Background="DarkCyan" >Rafraichir</Button>
+            <Button Grid.Column="1" Margin="0, 15, 10, 15" FontSize="10px" Command="{Binding DeleteProduits}" Background="DarkCyan" >Supprimer selection</Button>
+        </Grid>
 
         <my:DetailProduit Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="5" DataContext="{Binding SelectedProduit, UpdateSourceTrigger=PropertyChanged}"></my:DetailProduit>
     </Grid>

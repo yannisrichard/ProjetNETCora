@@ -14,7 +14,6 @@ namespace WebApplication.ProjetNETCora.Controllers
         public ActionResult Index()
         {
             List<Categorie> categories = Manager.Instance.GetAllCategorie();
-
             List<SelectListItem> items = new List<SelectListItem>();
             foreach(Categorie cat in categories){
                 items.Add(new SelectListItem { Text = cat.Libelle, Value = cat.Id.ToString() });
@@ -22,9 +21,8 @@ namespace WebApplication.ProjetNETCora.Controllers
             ViewBag.Categories = items;
 
             List<Produit> produits = Manager.Instance.GetAllProduit();
-            return View(produits);
-            
-            //return View(produits.Where(p => p.CategorieId == selectedCategorie && p.Libelle.Contains("/" + selectedNom + "/")));
+
+            return View(produits);  
         }
 
         // GET: Detail Produit
@@ -64,7 +62,7 @@ namespace WebApplication.ProjetNETCora.Controllers
 
         // POST: Recherche
         [HttpPost]
-        public ActionResult Recherche(int selectedCategorie, string selectedNom)
+        public ActionResult Recherche(int? selectedCategorie, string selectedNom)
         {
 
             //Travailler avec une view model que l'on binde dans la vue donc
@@ -85,7 +83,10 @@ namespace WebApplication.ProjetNETCora.Controllers
 
 
             List<Produit> produits = Manager.Instance.GetAllProduit();
-            return View(produits.Where(p => p.CategorieId == selectedCategorie && p.Libelle.Contains("/" + selectedNom + "/")));
+            produits = produits.Where(p => p.CategorieId == selectedCategorie && p.Libelle.Contains("/" + selectedNom + "/")).ToList();
+            
+            //Temporaire, fonctionne pas logique pas de vue recherche
+            return View(produits);
         }
 
         // GET: /Produit/Create 
